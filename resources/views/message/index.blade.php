@@ -67,7 +67,11 @@
     </head>
     <body>
         <div class="container">
-            <form style="width: fit-content; margin: 100px auto 50px" method="POST" action={{ route('message.store') }}>
+            <form
+                style="width: fit-content; margin: 100px auto 50px"
+                method="POST"
+                action={{ route('message.store') }}
+            >
                 @csrf
 
                 <table>
@@ -97,7 +101,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="submit" value="Save"/>
+                            <input
+                                onclick="this.form.submit(); this.disabled = true"
+                                type="submit"
+                                value="Save"
+                            />
                         </td>
                     </tr>
                 </table>
