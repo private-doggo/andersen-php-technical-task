@@ -7,9 +7,16 @@ use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
+    protected $message;
+
+    public function __construct(Message $message)
+    {
+        $this->message = $message;
+    }
+
     public function index()
     {
-        $messages = Message::all();
+        $messages = $this->message->all();
 
         return view('message.index', [
             'messages' => $messages,
@@ -24,7 +31,7 @@ class MessageController extends Controller
             'text' => 'required|string|max:255'
         ]);
 
-        Message::create($request->all());
+        $this->message->create($request->all());
 
         return redirect()->back();
     }
