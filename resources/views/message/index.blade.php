@@ -73,7 +73,7 @@
                 <table>
                     <tr>
                         <td>
-                            <label for="name">Имя</label>
+                            <label for="name">Name</label>
                         </td>
                         <td>
                             <input type="text" id="name">
@@ -81,7 +81,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="email">Почта</label>
+                            <label for="email">Email</label>
                         </td>
                         <td>
                             <input type="text" id="email">
@@ -89,7 +89,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <label for="text">Текст</label>
+                            <label for="text">Text</label>
                         </td>
                         <td>
                             <input type="text" id="text">
@@ -97,7 +97,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="submit" value="Сохранить"/>
+                            <input type="submit" value="Save"/>
                         </td>
                     </tr>
                 </table>
@@ -105,17 +105,17 @@
                 <div class="error">
                     <br>
                     @if ($errors->any())
-                        <small>Проверьте правильность введенных вами данных</small>
+                        <small>Check if the data you entered is valid</small>
                     @endif
                 </div>
             </form>
 
             <table id="saves">
                 <tr>
-                    <th>Имя</th>
-                    <th>Почта</th>
-                    <th>Сообщение</th>
-                    <th>Дата создания</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Creation date</th>
                 </tr>
 
                 @foreach($messages as $message)
