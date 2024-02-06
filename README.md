@@ -1,7 +1,7 @@
 <h1>Andersen php technical task</h1>
 <small>By Gregory</small>
 
-<img width="1280" alt="image" src="https://github.com/private-doggo/andersen-php-technical-task/assets/43881051/3e5b2119-3289-40ef-a375-3673724065eb">
+<img width="1280" alt="image" src="https://github.com/private-doggo/andersen-php-technical-task/assets/43881051/70f2fdbf-e769-4763-bf11-da55960f70bd">
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
