@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -12,9 +13,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $text Текст
  *
  * @property-read \Illuminate\Support\Carbon $created_at
+ *
+ * @mixin Builder
  */
 class Message extends Model
 {
     public $timestamps = false;
-    protected $fillable = ['created_at'];
+    protected $fillable = ['name', 'email', 'text', 'created_at'];
 }

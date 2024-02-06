@@ -24,11 +24,7 @@ class MessageController extends Controller
             'text' => 'required|string|max:255'
         ]);
 
-        $message = new Message();
-        $message->name = $request->input('name');
-        $message->email = $request->input('email');
-        $message->text = $request->input('text');
-        $message->save();
+        Message::create($request->all());
 
         return redirect()->back();
     }
