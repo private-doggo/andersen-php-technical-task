@@ -80,7 +80,7 @@
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email">
 
-                <label for="text">Text</label>
+                <label for="text">Message</label>
                 <input type="text" name="text" id="text">
 
                 <input
