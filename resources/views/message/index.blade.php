@@ -76,7 +76,7 @@
                             <label for="name">Name</label>
                         </td>
                         <td>
-                            <input type="text" id="name">
+                            <input type="text" name="name" id="name">
                         </td>
                     </tr>
                     <tr>
@@ -84,7 +84,7 @@
                             <label for="email">Email</label>
                         </td>
                         <td>
-                            <input type="text" id="email">
+                            <input type="text" name="email" id="email">
                         </td>
                     </tr>
                     <tr>
@@ -92,7 +92,7 @@
                             <label for="text">Text</label>
                         </td>
                         <td>
-                            <input type="text" id="text">
+                            <input type="text" name="text" id="text">
                         </td>
                     </tr>
                     <tr>
