@@ -21,7 +21,7 @@
 
             input[type=text] {
                 padding: 6px 10px;
-                margin: 8px 0;
+                margin-right: 2em;
                 border: 1px solid #000;
                 background: #fff;
                 color: #000;
@@ -74,67 +74,48 @@
             >
                 @csrf
 
-                <table>
-                    <tr>
-                        <td>
-                            <label for="name">Name</label>
-                        </td>
-                        <td>
-                            <input type="text" name="name" id="name">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="email">Email</label>
-                        </td>
-                        <td>
-                            <input type="text" name="email" id="email">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="text">Text</label>
-                        </td>
-                        <td>
-                            <input type="text" name="text" id="text">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input
-                                onclick="this.form.submit(); this.disabled = true"
-                                type="submit"
-                                value="Save"
-                            />
-                        </td>
-                    </tr>
-                </table>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+
+                <label for="text">Text</label>
+                <input type="text" name="text" id="text">
+
+                <input
+                    onclick="this.form.submit(); this.disabled = true"
+                    type="submit"
+                    value="Save"
+                />
 
                 <div class="error">
                     <br>
                     @if ($errors->any())
-                        <small>Check if the data you entered is valid</small>
+                        <p style="text-align: center">Check if the data you entered is valid</p>
                     @endif
                 </div>
             </form>
 
-            <table id="saves">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                    <th>Creation date</th>
-                </tr>
-
-                @foreach($messages as $message)
+            @if(count($messages) > 0)
+                <table id="saves">
                     <tr>
-                        <td>{{ $message->name }}</td>
-                        <td>{{ $message->email }}</td>
-                        <td>{{ $message->text }}</td>
-                        <td>{{ $message->created_at }}</td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Message</th>
+                        <th>Creation date</th>
                     </tr>
-                @endforeach
-            </table>
+
+                    @foreach($messages as $message)
+                        <tr>
+                            <td>{{ $message->name }}</td>
+                            <td>{{ $message->email }}</td>
+                            <td>{{ $message->text }}</td>
+                            <td>{{ $message->created_at }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            @endif
         </div>
     </body>
 </html>
