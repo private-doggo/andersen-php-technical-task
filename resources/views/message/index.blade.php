@@ -47,7 +47,7 @@
             </form>
 
             @if(count($messages) > 0)
-                <table id="saves">
+                <table class="saves">
                     <tr>
                         <th>Name</th>
                         <th>Email</th>
