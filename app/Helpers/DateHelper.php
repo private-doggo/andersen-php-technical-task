@@ -25,10 +25,10 @@ final class DateHelper
         $diffInDays = +now()->diff($dateTime)->format('%R%a');
         $date = self::DAYS_RELATIVE[$diffInDays] ?? $dateTime->format($dateFormat);
 
-        if ($concatenation !== null) {
-            return $date . $concatenation . $dateTime->format($timeFormat);
+        if ($concatenation === null) {
+            return $date;
         }
 
-        return $date;
+        return $date . $concatenation . $dateTime->format($timeFormat);
     }
 }
