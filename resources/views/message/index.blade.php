@@ -14,9 +14,10 @@
                 margin: 0 auto;
             }
 
-            .error {
+            .errors {
+                margin-top: 1em;
+                text-align: center;
                 color: #ef4444;
-                height: 1em;
             }
 
             input[type=text] {
@@ -39,6 +40,7 @@
             /* saves table */
 
             #saves {
+                margin-top: 1em;
                 border-collapse: collapse;
                 width: 100%;
             }
@@ -68,7 +70,7 @@
     <body>
         <div class="container">
             <form
-                style="width: fit-content; margin: 100px auto 50px"
+                style="width: fit-content; margin: 100px auto 0"
                 method="POST"
                 action={{ route('message.store') }}
             >
@@ -89,11 +91,10 @@
                     value="Save"
                 />
 
-                <div class="error">
-                    <br>
-                    @if ($errors->any())
-                        <p style="text-align: center">Check if the data you entered is valid</p>
-                    @endif
+                <div class="errors">
+                    @foreach($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
                 </div>
             </form>
 
