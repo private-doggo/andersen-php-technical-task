@@ -1,3 +1,4 @@
+@php use Carbon\Carbon; @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -52,7 +53,7 @@
                             <td>{{ $message->name }}</td>
                             <td>{{ $message->email }}</td>
                             <td>{{ $message->text }}</td>
-                            <td>{{ $message->created_at }}</td>
+                            <td>{{ Carbon::parse($message->created_at)->format('F j \a\t H:i') }}</td>
                         </tr>
                     @endforeach
                 </table>
