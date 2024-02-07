@@ -5,12 +5,6 @@
     margin: 0 auto;
 }
 
-.errors {
-    margin-top: 1em;
-    text-align: center;
-    color: #ef4444;
-}
-
 input[type=text] {
     padding: 6px 10px;
     margin-right: 2em;
@@ -28,28 +22,32 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-/* saves table */
+.errors {
+    margin-top: 1em;
+    text-align: center;
+    color: #ef4444;
+}
 
-#saves {
+.saves {
     margin-top: 1em;
     border-collapse: collapse;
     width: 100%;
 }
 
-#saves td, table th {
+.saves td, table th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#saves tr:nth-child(even) {
+.saves tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-#saves tr:hover {
+.saves tr:hover {
     background-color: #ddd;
 }
 
-#saves th {
+.saves th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
