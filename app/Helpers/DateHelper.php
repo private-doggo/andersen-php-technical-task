@@ -22,13 +22,9 @@ final class DateHelper
         string $concatenation = null,
         string $timeFormat = 'H:i'): string
     {
-        $diffInDays = +now()->diff($dateTime)->format('%R%a');
+        $diffInDays = $dateTime->format('d') - now()->format('d');
         $date = self::DAYS_RELATIVE[$diffInDays] ?? $dateTime->format($dateFormat);
 
-        if ($concatenation === null) {
-            return $date;
-        }
-
-        return $date . $concatenation . $dateTime->format($timeFormat);
+        return $date . (is_null($concatenation) ?: $concatenation . $dateTime->format($timeFormat));
     }
 }
